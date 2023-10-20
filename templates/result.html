@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+
+    {% if valid_email_addresses %}
+        <h2>Valid Email Addresses:</h2>
+        <ul>
+            {% for email in valid_email_addresses %}
+                <li>{{ email }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if invalid_email_addresses %}
+        <h2>Invalid Email Addresses:</h2>
+        <ul>
+            {% for email in invalid_email_addresses %}
+                <li>{{ email }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
